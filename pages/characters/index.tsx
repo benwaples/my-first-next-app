@@ -4,9 +4,11 @@ import { CharacterTypes } from '../types'
 
 function Index({ characters }): JSX.Element {
 
-  const characterEls: JSX.Element[] = characters.results.map((character: CharacterTypes) => <h1 key={character.url}>{character.name}</h1>)
+  const characterEls: JSX.Element[] = characters.results.map((character: CharacterTypes, i: number) => (
 
-  console.log(characters)
+  <h1 key={character.url}><a href={`characters/${i + 1}`}>{character.name}</a></h1>
+  ))
+
 
   return (
     <>
