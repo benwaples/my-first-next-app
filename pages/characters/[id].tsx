@@ -1,23 +1,38 @@
-import { useRouter } from 'next/router'
-import { CharacterTypes } from '../types'
+import { CharacterTypes } from "../types";
+import { capitalize, inaccuratePronouns } from "../utils";
+import styles from '../../styles/DetailCharacter.module.css'
 
+function DetailCharacter({ character }: { character: CharacterTypes }) {
+  const {
+    name,
+    gender,
+    image,
+    height,
+    wiki,
+    bornLocation,
+    species,
+    cybernetics,
+    masters,
+    apprentices
+  } = character
 
-function Character({ character }) {
-  
-  const router = useRouter()
-  const { id } = router.query
-  console.log(id)
+  function commaSeparatedString(arr: string[]) {
+    return arr.join(', ')
+  }
+
   return (
-    <>
-      <h1>Youre Character</h1>
-      <h3>{character.name}</h3>
-    </>
+   <section className={styles.detailCharacter}>
+     <h1>{name}</h1>
+     <img src={image} alt={name}/>
+     <p>Description: {name} is {height}m tall, born on {bornLocation}, and is of {species} species. {capitalize(inaccuratePronouns(gender)[0])} has a {cybernetics} cybernetic. {name}'s masters include {commaSeparatedString(masters)}, and {inaccuratePronouns(gender)[2]} apprentices are {commaSeparatedString(apprentices)}.</p>
+     <p>Click <a href={wiki} target="_blank">here</a> to learn more</p>
+   </section>
   )
 }
 
 // this runs at request
 export async function getServerSideProps({ params }) {
-  const request = await fetch(`https://swapi.dev/api/people/${params.id}`)
+  const request = await fetch(`https://akabab.github.io/starwars-api/api/id/${params.id}.json`)
   const json = await request.json();
   
   
@@ -56,4 +71,4 @@ export async function getServerSideProps({ params }) {
     }
 */
 
-export default Character
+export default DetailCharacter
