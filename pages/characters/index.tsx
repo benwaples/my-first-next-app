@@ -1,13 +1,11 @@
 
 import { CharacterTypes } from '../types'
+import Character from './character'
 
 
 function Index({ characters }): JSX.Element {
 
-  const characterEls: JSX.Element[] = characters.map((character: CharacterTypes, i: number) => (
-
-  <h1 key={character.id}><a href={`characters/${i + 1}`}>{character.name}</a></h1>
-  ))
+  const characterEls: JSX.Element[] = characters.map((character: CharacterTypes, i: number) => <Character {...{character}}/>)
 
 
   return (
