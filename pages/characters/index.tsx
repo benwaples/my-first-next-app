@@ -1,6 +1,7 @@
 
 import { CharacterTypes } from '../types'
 import Character from './character'
+import styles from '../../styles/CharacterList.module.css'
 
 
 function Index({ characters }): JSX.Element {
@@ -9,9 +10,9 @@ function Index({ characters }): JSX.Element {
 
 
   return (
-    <>
+    <ul className={styles.characterList}>
     {characterEls}
-    </>
+    </ul>
   )
 }
 
