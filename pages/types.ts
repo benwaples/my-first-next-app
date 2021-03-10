@@ -1,18 +1,24 @@
 export interface CharacterTypes {
+  id: number;
   name: string;
-  height: string;
-  mass: string;
-  hair_color: string;
-  skin_color: string;
-  eye_color: string;
-  birth_year: string;
+  height: number;
+  mass: number;
   gender: string;
   homeworld: string;
-  films?: (string)[] | null;
-  species?: (null)[] | null;
-  vehicles?: (string)[] | null;
-  starships?: (string)[] | null;
-  created: string;
-  edited: string;
-  url: string;
+  wiki: string;
+  image: string;
+  born: number;
+  bornLocation: string;
+  died: number;
+  diedLocation: string;
+  species: string;
+  hairColor: string;
+  eyeColor: string;
+  skinColor: string;
+  cybernetics: string;
+  affiliations?: (string)[] | null;
+  masters?: (string)[] | null;
+  apprentices?: (string)[] | null;
+  formerAffiliations?: (null)[] | null;
 }
+
