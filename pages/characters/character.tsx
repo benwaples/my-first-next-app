@@ -1,5 +1,5 @@
 import { CharacterTypes } from "../types"
-
+import Link from 'next/link'
 
 interface Props {
   character: CharacterTypes
@@ -18,7 +18,9 @@ function Character(props: Props) {
       <h1>{name}</h1>
       <img src={image} alt={name}/>
       <p>origin: {homeworld}</p>
-      <a href={`/characters/${id}`}>learn more</a>
+      <Link href={`/characters/${id}`}>
+        <a>learn more</a>
+      </Link>
     </li>
   )
 }
