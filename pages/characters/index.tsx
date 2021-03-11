@@ -12,7 +12,7 @@ function Index({ json }): JSX.Element {
   const [filterQuery, setFilterQuery] = useState<string>('')
 
   useEffect(() => {
-    setFilteredCharacters(filterQuery ? characters.filter((character: CharacterTypes) => character.name.includes(filterQuery)) : characters) 
+    setFilteredCharacters(filterQuery ? characters.filter((character: CharacterTypes) => character.name.toUpperCase().includes(filterQuery.toUpperCase())) : characters) 
 
   }, [filterQuery])
 
