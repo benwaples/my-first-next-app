@@ -13,18 +13,23 @@ function DetailCharacter({ character }: { character: CharacterTypes }) {
     species,
     cybernetics,
     masters,
-    apprentices
+    apprentices,
+    equipment,
+    affiliations
   } = character
 
   function commaSeparatedString(arr: string[]) {
     return arr.join(', ')
   }
 
+  const firstAttribute = masters || equipment;
+  const secondAttribute = apprentices || affiliations
+
   return (
    <section className={styles.detailCharacter}>
      <h1>{name}</h1>
      <img src={image} alt={name}/>
-     <p><strong>Description</strong>: {name} is {height}m tall, born on {bornLocation}, and is of {species} species. {capitalize(inaccuratePronouns(gender)[0])} has a {cybernetics} cybernetic. {name}'s masters include {commaSeparatedString(masters)}, and {inaccuratePronouns(gender)[2]} apprentices are {commaSeparatedString(apprentices)}.</p>
+     <p><strong>Description</strong>: {name} is {height}m tall, born on {bornLocation}, and is of {species} species. {capitalize(inaccuratePronouns(gender)[0])} has a {cybernetics} cybernetic. {name}'s masters include {commaSeparatedString(firstAttribute)}, and {inaccuratePronouns(gender)[2]} apprentices are {commaSeparatedString(secondAttribute)}.</p>
      <p>Click <a href={wiki} target="_blank">here</a> to learn more</p>
    </section>
   )

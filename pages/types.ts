@@ -20,5 +20,6 @@ export interface CharacterTypes {
   masters?: (string)[] | null;
   apprentices?: (string)[] | null;
   formerAffiliations?: (null)[] | null;
+  equipment?: string[] | null;
 }
 
