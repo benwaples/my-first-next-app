@@ -11,7 +11,7 @@ function Index({ characters }): JSX.Element {
 
   return (
     <ul className={styles.characterList}>
-    {characterEls}
+      {characterEls}
     </ul>
   )
 }
