@@ -1,5 +1,17 @@
 .header {
+  padding: 10px;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+
+  background-image: url('https://i.pinimg.com/originals/d7/a6/11/d7a61190a836bdcfc62bf97af4f4c74b.png') ;
+  background-size: contain;
+
+  color: yellow;
+}
+
+.header a {
+  color: yellow;
 }

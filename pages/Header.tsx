@@ -5,7 +5,8 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <h1><a href='/characters'>Star Wars Search</a></h1>
+      <h1>Star Wars Search</h1>
+      <a href='/characters'>HOME</a>
     </header>
   )
 }
