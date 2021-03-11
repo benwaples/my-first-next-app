@@ -19,7 +19,10 @@ function DetailCharacter({ character }: { character: CharacterTypes }) {
   } = character
 
   function commaSeparatedString(arr: string[]) {
-    return arr.join(', ')
+    const type = typeof arr
+
+    if(type !== 'string') return arr.join(', ')
+    return arr
   }
 
   const firstAttribute = masters || equipment;
@@ -40,6 +43,7 @@ export async function getServerSideProps({ params }) {
   const request = await fetch(`https://akabab.github.io/starwars-api/api/id/${params.id}.json`)
   const json = await request.json();
   
+  console.log(json);
   
   return {
     props: { character: json}

@@ -1,10 +1,11 @@
+import styles from '../styles/Header.module.css'
 
 function Header() {
   
 
   return (
-    <header>
-      <h1>Star Wars Search</h1>
+    <header className={styles.header}>
+      <h1><a href='/characters'>Star Wars Search</a></h1>
     </header>
   )
 }

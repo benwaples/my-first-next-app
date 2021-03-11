@@ -23,7 +23,6 @@ export async function getStaticProps() {
 
   const request = await fetch('https://akabab.github.io/starwars-api/api/all.json')
   const json = await request.json()
-  console.log(json)
   return ({
     props: { characters: json }
   })
