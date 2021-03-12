@@ -14,14 +14,22 @@ function Filter(props: Props) {
   } = props
 
   return (
-    <input 
-      className={styles.filter}
-      type="text" 
-      name="filterQuery" 
-      id="filterQuery" 
-      value={filterQuery}
-      onChange={(e) => setFilterQuery(e.target.value)}
-    /> 
+    <div className={styles.filter}>
+      Search
+      <input 
+        type="text" 
+        name="filterQuery" 
+        id="filterQuery" 
+        value={filterQuery}
+        onChange={(e) => setFilterQuery(e.target.value)}
+      /> 
+      <div className={styles.buttonContainer}>
+        <div className={styles.yellowSquare}/>
+        <div className={styles.yellowSquare}/>
+        <div className={styles.redCircle}/>
+        
+      </div>
+    </div>
   )
 }
 
