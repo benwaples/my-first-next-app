@@ -1,5 +1,5 @@
 import { CharacterTypes } from "../../utils/types";
-import { capitalize, inaccuratePronouns } from "../utils";
+import { capitalize, inaccuratePronouns } from "../../utils/utils";
 import styles from '../../styles/DetailCharacter.module.css'
 
 function DetailCharacter({ character }: { character: CharacterTypes }) {
