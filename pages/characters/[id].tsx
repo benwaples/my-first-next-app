@@ -43,7 +43,6 @@ export async function getServerSideProps({ params }) {
   const request = await fetch(`https://akabab.github.io/starwars-api/api/id/${params.id}.json`)
   const json = await request.json();
   
-  console.log(json);
   
   return {
     props: { character: json}
