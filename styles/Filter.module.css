@@ -11,7 +11,6 @@
 
 .filter input {
   border: 1px solid black;
-  box-shadow: 2px 2px red;
   height: 50px;
   font-size: x-large;
 }
@@ -53,7 +52,9 @@
   box-shadow: 1px 1px black;
 }
 
-.buttonContainer div:hover {
+.buttonContainer div:active {
   cursor: pointer;
+  box-shadow: 3 3px #666;
+  transform: translateY(4px);
   scale: .3;
 }
