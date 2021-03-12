@@ -9,6 +9,13 @@
   align-items: center;
 }
 
+.filter input {
+  border: 1px solid black;
+  box-shadow: 2px 2px red;
+  height: 50px;
+  font-size: x-large;
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-evenly;
@@ -21,7 +28,7 @@
   margin: 5px 5px;
   border-radius: 5px;
 
-  background-color: orange;
+  background-color: yellow;
   box-shadow: 1px 1px black;
 
 }
@@ -34,4 +41,19 @@
 
   background-color: red;
   box-shadow: 1px 1px black;
+}
+
+.blueCircle {
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px;
+  border-radius: 50%;
+
+  background-color: blue;
+  box-shadow: 1px 1px black;
+}
+
+.buttonContainer div:hover {
+  cursor: pointer;
+  scale: .3;
 }

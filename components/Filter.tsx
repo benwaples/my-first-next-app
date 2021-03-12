@@ -27,6 +27,7 @@ function Filter(props: Props) {
         <div className={styles.yellowSquare}/>
         <div className={styles.yellowSquare}/>
         <div className={styles.redCircle}/>
+        <div className={styles.blueCircle}/>
         
       </div>
     </div>
