@@ -1,5 +1,6 @@
 import React from 'react'
 import { CharacterTypes } from '../utils/types'
+import styles from '../styles/Filter.module.css'
 
 interface Props {
   filterQuery: string;
@@ -13,7 +14,14 @@ function Filter(props: Props) {
   } = props
 
   return (
-    <input type="text" name="filterQuery" id="filterQuery" value={filterQuery} onChange={(e) => setFilterQuery(e.target.value)}/> 
+    <input 
+      className={styles.filter}
+      type="text" 
+      name="filterQuery" 
+      id="filterQuery" 
+      value={filterQuery}
+      onChange={(e) => setFilterQuery(e.target.value)}
+    /> 
   )
 }
 
