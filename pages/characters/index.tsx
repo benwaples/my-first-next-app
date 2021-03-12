@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { CharacterTypes } from '../../utils/types'
-import Character from './character'
+import Character from '../../components/character'
 import styles from '../../styles/CharacterList.module.css'
-import Filter from './filter/Filter'
+import Filter from '../../components/Filter'
 
 
 function Index({ json }): JSX.Element {
