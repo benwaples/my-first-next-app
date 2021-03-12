@@ -1,5 +1,4 @@
 import React from 'react'
-import { CharacterTypes } from '../utils/types'
 import styles from '../styles/Filter.module.css'
 
 interface Props {
