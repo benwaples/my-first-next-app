@@ -1,4 +1,4 @@
-import { CharacterTypes } from "../types"
+import { CharacterTypes } from "../../utils/types"
 import Link from 'next/link'
 
 interface Props {

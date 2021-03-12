@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { CharacterTypes } from '../types'
+import { CharacterTypes } from '../../utils/types'
 import Character from './character'
 import styles from '../../styles/CharacterList.module.css'
 import Filter from './filter/Filter'

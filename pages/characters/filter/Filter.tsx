@@ -1,5 +1,5 @@
 import React from 'react'
-import { CharacterTypes } from '../../types'
+import { CharacterTypes } from '../../../utils/types'
 
 interface Props {
   filterQuery: string;
