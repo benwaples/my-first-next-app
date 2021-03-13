@@ -2,7 +2,7 @@ export function inaccuratePronouns(genderAccordingToWookiePediea: string): strin
   return genderAccordingToWookiePediea === 'male' ?
   ['he','him','his']
   :
-  ['she','her','hers']
+  ['she','hers', 'her']
 }
 
 export function capitalize(string: string): string {
