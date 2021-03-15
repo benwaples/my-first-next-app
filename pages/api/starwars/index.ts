@@ -12,7 +12,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   if(page) {
     const paginatedJson = perPage ? makePages(json, perPage) : makePages(json)
-    const totalPages = paginatedJson.length + 1
+
+    const totalPages = paginatedJson.length + 1;
+
     res.status(200).json({ 
       totalPages,
       currentPage: page,
@@ -20,7 +22,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       prevPage: `${URL}/api/starwars?page=${page !== 1 ? page - 1 : page }&perPage=${perPage}`,
       results: paginatedJson[page - 1]
     })
+
   } else {
+    
     res.status(200).json({ json })
   }
 

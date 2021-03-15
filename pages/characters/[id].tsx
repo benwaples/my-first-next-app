@@ -1,6 +1,8 @@
 import { CharacterTypes } from "../../utils/types";
 import { capitalize, inaccuratePronouns } from "../../utils/utils";
-import styles from '../../styles/DetailCharacter.module.css'
+import styles from '../../styles/DetailCharacter.module.css';
+
+const URL = process.env.API_URL || 'http://localhost:3000';
 
 function DetailCharacter({ character }: { character: CharacterTypes }) {
   const {
@@ -44,11 +46,11 @@ function DetailCharacter({ character }: { character: CharacterTypes }) {
 
 // this runs at request
 export async function getServerSideProps({ params }) {
-  const request = await fetch(`https://akabab.github.io/starwars-api/api/id/${params.id}.json`)
+  const request = await fetch(`${URL}/api/starwars/${params.id}`)
   const json = await request.json();
   
   return {
-    props: { character: json}
+    props: { character: json.json }
   }
 }
 
