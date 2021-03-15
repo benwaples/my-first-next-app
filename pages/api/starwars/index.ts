@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { makePages } from '../../../utils/utils'
-const URL = 'https://boba-fett-is-cool.vercel.app'
+const URL = process.env.API_URL
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
 

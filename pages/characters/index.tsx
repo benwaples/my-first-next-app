@@ -4,6 +4,8 @@ import Character from '../../components/character'
 import styles from '../../styles/CharacterList.module.css'
 import Filter from '../../components/Filter'
 
+const URL = process.env.API_URL || 'http://localhost:3000'
+
 
 function Index({ json }): JSX.Element {
   const [characters, setCharacters] = useState<CharacterTypes[]>(json)
@@ -19,7 +21,8 @@ function Index({ json }): JSX.Element {
   const characterEls: JSX.Element[] = filteredCharacters.map((character: CharacterTypes, i: number) => <Character {...{character}} key={character.name} />)
 
   
-
+  // console.log(URL);
+  
   return (
     <>
     <div>
@@ -37,8 +40,8 @@ export default Index
 
 export async function getServerSideProps() {
 
-  const request = await fetch('https://akabab.github.io/starwars-api/api/all.json')
-  const json = await request.json()
+  const request = await fetch(`${URL}/api/starwars`)
+  const { json } = await request.json()
   return ({
     props: { json }
   })
