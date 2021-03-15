@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ![my favorite starwars scene](https://media.giphy.com/media/2w5MMNvg70MrQ0I2DR/giphy.gif)
+^^ my favorite Starwars scene^^
 
 <br>
 <br>
