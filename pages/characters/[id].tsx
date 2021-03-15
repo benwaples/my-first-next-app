@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { CharacterTypes } from "../../utils/types";
 import { capitalize, inaccuratePronouns } from "../../utils/utils";
 import styles from '../../styles/DetailCharacter.module.css'
@@ -31,11 +30,12 @@ function DetailCharacter({ character }: { character: CharacterTypes }) {
 
   const firstAttribute = masters || equipment || formerAffiliations;
   const secondAttribute = apprentices || affiliations
-
+  console.log(image);
+  
   return (
    <section className={styles.detailCharacter}>
      <h1>{name}</h1>
-     <Image src={image} alt={name}/>
+     <img src={image} alt={name} />
      <p><strong>Description</strong>: {name} is {height}m tall, born on {bornLocation || "unknown location"}, and is of {species} species.{cybernetics && `${capitalize(inaccuratePronouns(gender)[0])} has a ${cybernetics} cybernetic.`}  {name}'s {masters ? 'masters' : 'equipment'} includes {commaSeparatedString(firstAttribute) || 'unknown equipment'}, and {inaccuratePronouns(gender)[2]} {apprentices ? 'apprentices' : 'affiliations'} are {commaSeparatedString(secondAttribute) || 'unknown attributes'}.</p>
      <p>Click <a href={wiki} target="_blank">here</a> to learn more</p>
    </section>
