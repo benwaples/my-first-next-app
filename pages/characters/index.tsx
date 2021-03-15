@@ -35,7 +35,7 @@ function Index({ json }): JSX.Element {
 export default Index
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   const request = await fetch('https://akabab.github.io/starwars-api/api/all.json')
   const json = await request.json()
