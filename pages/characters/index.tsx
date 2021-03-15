@@ -16,7 +16,7 @@ function Index({ json }): JSX.Element {
 
   }, [filterQuery])
 
-  const characterEls: JSX.Element[] = filteredCharacters.map((character: CharacterTypes, i: number) => <Character {...{character}}/>)
+  const characterEls: JSX.Element[] = filteredCharacters.map((character: CharacterTypes, i: number) => <Character {...{character}} key={character.name} />)
 
   
 
