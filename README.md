@@ -26,4 +26,4 @@ get 10 characters a page
 get specified characters per page
 `/api/starwars?page=<number>&perPage=<number>`
 
-
+data sourced from https://github.com/akabab/starwars-api
