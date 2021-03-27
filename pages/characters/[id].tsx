@@ -46,6 +46,7 @@ function DetailCharacter({ character }: { character: CharacterTypes }) {
 
 // this runs at request
 export async function getServerSideProps({ params }) {
+  
   const request = await fetch(`${URL}/api/starwars/${params.id}`)
   const json = await request.json();
   
